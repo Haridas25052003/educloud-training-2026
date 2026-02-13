@@ -1,0 +1,113 @@
+=========================================
+      WRAPPER CLASSES IN JAVA
+=========================================
+
+1. INTRODUCTION
+---------------
+Wrapper classes in Java are used to convert primitive data types into objects. 
+Java is an object-oriented programming language, but primitive types (int, 
+char, double, etc.) are not objects.
+
+To use primitives in collections or object-based operations, Java provides 
+corresponding wrapper classes located in the java.lang package.
+
+Primitive Type     Wrapper Class
+--------------     -------------
+byte               Byte
+short              Short
+int                Integer
+long               Long
+float              Float
+double             Double
+char               Character
+boolean            Boolean
+
+
+2. WHY WRAPPER CLASSES ARE REQUIRED
+-----------------------------------
+- Primitive types cannot be used in Java Collections (ArrayList, HashMap, etc.).
+- Collections only work with objects.
+
+Example:
+ArrayList<int>      -> NOT ALLOWED
+ArrayList<Integer>  -> ALLOWED
+
+- Wrapper classes allow primitive values to be treated as objects.
+
+
+3. AUTOBOXING AND UNBOXING
+--------------------------
+Autoboxing: 
+Automatic conversion of primitive type into its corresponding wrapper object.
+Example: 
+int a = 10;
+Integer obj = a;
+
+Unboxing: 
+Automatic conversion of wrapper object into primitive type.
+Example: 
+Integer obj = 20;
+int b = obj;
+
+
+4. IMPORTANT METHODS
+--------------------
+- parseInt():  Converts String to primitive type.
+               Example: int num = Integer.parseInt("100");
+
+- valueOf():   Converts String or primitive to wrapper object.
+               Example: Integer obj = Integer.valueOf(50);
+
+- toString():  Converts primitive or wrapper to String.
+               Example: String s = Integer.toString(200);
+
+- compareTo(): Used to compare two wrapper objects.
+
+
+5. IMMUTABILITY
+---------------
+Wrapper classes are immutable. Once an object is created, its value cannot 
+be changed.
+
+Example:
+Integer x = 10;
+x = 20; 
+// A new object is created instead of modifying the existing one.
+
+
+6. INTEGER CACHING
+------------------
+Integer values between -128 to 127 are cached by the JVM. If you create 
+Integer objects within this range, the JVM reuses the same object.
+
+Example:
+Integer a = 100, b = 100;
+a == b;  // true (Same reference)
+
+Integer x = 200, y = 200;
+x == y;  // false (Different objects in memory)
+
+
+7. REAL-TIME USAGE
+------------------
+- Used in Collections (ArrayList, etc.)
+- Used in JDBC and database operations
+- Used in parsing user input
+- Used in Spring Boot request parameters
+- Used when null values are required (Primitives cannot be null)
+
+
+8. DIFFERENCE: PRIMITIVE VS WRAPPER
+-----------------------------------
+PRIMITIVE:
+- Stores actual value
+- Faster
+- Cannot store null
+- Not an object
+
+WRAPPER:
+- Stores object reference
+- Slightly slower
+- Can store null
+- Works with Collections
+=========================================
