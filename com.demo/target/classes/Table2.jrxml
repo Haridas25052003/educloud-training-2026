@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN"
+"http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="Table2"
+    pageWidth="595"
+    pageHeight="842"
+    columnWidth="555"
+    leftMargin="20"
+    rightMargin="20"
+    topMargin="20"
+    bottomMargin="20">
+
+    <!-- Fields -->
+    <field name="id" class="java.lang.Integer"/>
+    <field name="name" class="java.lang.String"/>
+    <field name="city" class="java.lang.String"/>
+    <field name="fee" class="java.lang.Double"/>
+    <field name="status" class="java.lang.String"/>
+
+    <!-- Title -->
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="10" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Student Fee Chart]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Summary Band -->
+    <summary>
+        <band height="350">
+
+            <barChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="0" y="0" width="555" height="300"/>
+                </chart>
+
+                <categoryDataset>
+                    <categorySeries>
+                        <seriesExpression><![CDATA["Fee"]]></seriesExpression>
+                        <categoryExpression><![CDATA[$F{name}]]></categoryExpression>
+                        <valueExpression><![CDATA[$F{fee}]]></valueExpression>
+                    </categorySeries>
+                </categoryDataset>
+
+                <barPlot>
+                    <plot/>
+                </barPlot>
+
+            </barChart>
+
+        </band>
+    </summary>
+
+</jasperReport>

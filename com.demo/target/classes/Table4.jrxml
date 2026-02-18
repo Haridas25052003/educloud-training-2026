@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN"
+        "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="Table4"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="555"
+              leftMargin="20"
+              rightMargin="20"
+              topMargin="20"
+              bottomMargin="20">
+
+    <field name="studentName" class="java.lang.String"/>
+    <field name="course" class="java.lang.String"/>
+    <field name="fee" class="java.lang.Double"/>
+
+    <title>
+        <band height="60">
+            <staticText>
+                <reportElement x="0" y="20" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Course Fee Distribution]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <summary>
+        <band height="400">
+
+            <pieChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="100" y="40" width="350" height="300"/>
+                </chart>
+
+                <pieDataset>
+                    <keyExpression><![CDATA[$F{course}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{fee}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{course} + " : " + $F{fee}]]></labelExpression>
+                </pieDataset>
+
+                <piePlot>
+                    <plot/>
+                </piePlot>
+
+            </pieChart>
+
+        </band>
+    </summary>
+
+</jasperReport>

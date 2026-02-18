@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN"
+        "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="course_chart_report"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="555"
+              leftMargin="20"
+              rightMargin="20"
+              topMargin="20"
+              bottomMargin="20">
+
+    <!-- Fields -->
+    <field name="name" class="java.lang.String"/>
+    <field name="fees" class="java.lang.Double"/>
+
+    <!-- Title -->
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="15" width="555" height="30"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Course Fees Chart]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Summary -->
+    <summary>
+        <band height="350">
+
+            <barChart>
+                <chart>
+                    <reportElement x="0" y="0" width="555" height="300"/>
+                </chart>
+
+                <categoryDataset>
+                    <categorySeries>
+                        <seriesExpression><![CDATA["Fees"]]></seriesExpression>
+                        <categoryExpression><![CDATA[$F{name}]]></categoryExpression>
+                        <valueExpression><![CDATA[$F{fees}]]></valueExpression>
+                    </categorySeries>
+                </categoryDataset>
+
+                <barPlot>
+                    <plot/>
+                </barPlot>
+
+            </barChart>
+
+        </band>
+    </summary>
+
+</jasperReport>
