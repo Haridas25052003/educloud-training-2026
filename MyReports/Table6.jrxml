@@ -1,0 +1,116 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Table6" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3a72433a-4094-4968-973f-b2c26f205b77">
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="course" class="java.lang.String"/>
+	<field name="fee" class="java.lang.Double"/>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<summary height="386" splitType="Stretch">
+		<element kind="crosstab" uuid="ba67c979-02ca-4446-be8e-95dfbe27db67" x="140" y="40" width="330" height="250">
+			<dataset/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+			<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+			<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+			<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+			<rowGroup name="studentName" totalPosition="End" width="60">
+				<bucket class="java.lang.String">
+					<expression><![CDATA[$F{studentName}]]></expression>
+				</bucket>
+				<header mode="Opaque" style="Crosstab_CH">
+					<element kind="textField" uuid="a708f8ab-2d94-4b66-a3d9-fe9dca721e9e" x="0" y="0" width="60" height="20">
+						<expression><![CDATA[$V{studentName}]]></expression>
+					</element>
+				</header>
+				<totalHeader mode="Opaque" style="Crosstab_CT">
+					<element kind="staticText" uuid="bca9284d-2ede-4854-a79c-7499aa800138" x="0" y="0" width="60" height="20" forecolor="#FFFFFF">
+						<text><![CDATA[Total studentName]]></text>
+					</element>
+				</totalHeader>
+			</rowGroup>
+			<columnGroup name="course" totalPosition="End" height="20">
+				<bucket class="java.lang.String">
+					<expression><![CDATA[$F{course}]]></expression>
+				</bucket>
+				<header mode="Opaque" style="Crosstab_CH">
+					<element kind="textField" uuid="75726977-76cf-4ecf-9366-e19ccd159b30" x="0" y="0" width="60" height="20">
+						<expression><![CDATA[$V{course}]]></expression>
+					</element>
+				</header>
+				<totalHeader mode="Opaque" style="Crosstab_CT">
+					<element kind="staticText" uuid="4e3df1aa-8d5a-4e03-8bcf-5b67ad120e2c" x="0" y="0" width="60" height="20" forecolor="#FFFFFF">
+						<text><![CDATA[Total course]]></text>
+					</element>
+				</totalHeader>
+			</columnGroup>
+			<measure name="fee_MEASURE" calculation="Sum" class="java.lang.Double">
+				<expression><![CDATA[$F{fee}]]></expression>
+			</measure>
+			<cell width="60" height="20">
+				<contents mode="Opaque" style="Crosstab_CD">
+					<element kind="textField" uuid="a39cb5f6-d031-45fa-acec-96182c8c7e13" x="0" y="0" width="60" height="20">
+						<expression><![CDATA[$V{fee_MEASURE}]]></expression>
+					</element>
+				</contents>
+			</cell>
+			<cell width="60" height="20" columnTotalGroup="course">
+				<contents mode="Opaque" style="Crosstab_CT">
+					<element kind="textField" uuid="8bae93a0-398a-4e3c-937b-e3520aff1ada" x="0" y="0" width="60" height="20" forecolor="#FFFFFF">
+						<expression><![CDATA[$V{fee_MEASURE}]]></expression>
+					</element>
+				</contents>
+			</cell>
+			<cell width="60" height="20" rowTotalGroup="studentName">
+				<contents mode="Opaque" style="Crosstab_CT">
+					<element kind="textField" uuid="ff98887c-5a09-4d8b-a0cf-0286b5998cd4" x="0" y="0" width="60" height="20" forecolor="#FFFFFF">
+						<expression><![CDATA[$V{fee_MEASURE}]]></expression>
+					</element>
+				</contents>
+			</cell>
+			<cell width="60" height="20" rowTotalGroup="studentName" columnTotalGroup="course">
+				<contents mode="Opaque" style="Crosstab_CT">
+					<element kind="textField" uuid="0010ec51-91c1-4ecb-bb23-fdb8d9fe8556" x="0" y="0" width="60" height="20" forecolor="#FFFFFF">
+						<expression><![CDATA[$V{fee_MEASURE}]]></expression>
+					</element>
+				</contents>
+			</cell>
+		</element>
+	</summary>
+</jasperReport>

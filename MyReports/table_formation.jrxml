@@ -1,0 +1,52 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="table_formation" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e600703e-b75f-4884-b060-111db3d159df">
+	<query language="sql"><![CDATA[SELECT * FROM ORDERS]]></query>
+	<field name="EMPLOYEEID" class="java.lang.Integer"/>
+	<field name="ORDERDATE" class="java.sql.Timestamp"/>
+	<field name="REQUIREDDATE" class="java.sql.Timestamp"/>
+	<field name="SHIPPEDDATE" class="java.sql.Timestamp"/>
+	<field name="SHIPVIA" class="java.lang.Integer"/>
+	<field name="FREIGHT" class="java.math.BigDecimal"/>
+	<field name="SHIPADDRESS" class="java.lang.String"/>
+	<field name="SHIPCITY" class="java.lang.String"/>
+	<field name="SHIPREGION" class="java.lang.String"/>
+	<field name="SHIPPOSTALCODE" class="java.lang.String"/>
+	<field name="SHIPCOUNTRY" class="java.lang.String"/>
+	<detail>
+		<band height="30">
+			<element kind="textField" uuid="99dee47b-06b3-48e2-99e4-aeee8a5ae0f0" x="0" y="0" width="70" height="30">
+				<expression><![CDATA[$F{EMPLOYEEID}]]></expression>
+			</element>
+			<element kind="textField" uuid="5a7a2bc6-56e0-4046-92d2-a9365ff4bddd" x="70" y="0" width="70" height="30">
+				<expression><![CDATA[$F{ORDERDATE}]]></expression>
+			</element>
+			<element kind="textField" uuid="9c9e952c-42ea-47c0-ba79-f9e9b3ea033f" x="140" y="0" width="70" height="30">
+				<expression><![CDATA[$F{REQUIREDDATE}]]></expression>
+			</element>
+			<element kind="textField" uuid="07aacf51-0a65-449d-ac28-626b819a0755" x="210" y="0" width="70" height="30">
+				<expression><![CDATA[$F{SHIPPEDDATE}]]></expression>
+			</element>
+			<element kind="textField" uuid="1fa6330c-5cae-48c3-8265-50d1bedc76e2" x="280" y="0" width="70" height="30">
+				<expression><![CDATA[$F{SHIPVIA}]]></expression>
+			</element>
+			<element kind="textField" uuid="c4eaa9ad-2b83-43fc-9a52-f9b017bf84a3" x="350" y="0" width="70" height="30">
+				<expression><![CDATA[$F{FREIGHT}]]></expression>
+			</element>
+			<element kind="textField" uuid="5198c7d8-5571-4433-8085-38266abe2f73" x="420" y="0" width="70" height="30">
+				<expression><![CDATA[$F{SHIPADDRESS}]]></expression>
+			</element>
+			<element kind="textField" uuid="82d6fab7-ecb9-4463-aa91-1ad7aeda2283" x="490" y="0" width="70" height="30">
+				<expression><![CDATA[$F{SHIPCITY}]]></expression>
+			</element>
+			<element kind="textField" uuid="01aba12d-ed5a-408a-a726-31445ad6a106" x="560" y="0" width="70" height="30">
+				<expression><![CDATA[$F{SHIPREGION}]]></expression>
+			</element>
+			<element kind="textField" uuid="0bd311ca-3959-4371-a62a-4cbc7ac09854" x="630" y="0" width="70" height="30">
+				<expression><![CDATA[$F{SHIPPOSTALCODE}]]></expression>
+			</element>
+			<element kind="textField" uuid="b34d9ea9-c215-4b7a-9b61-592e043f19c9" x="700" y="0" width="70" height="30">
+				<expression><![CDATA[$F{SHIPCOUNTRY}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

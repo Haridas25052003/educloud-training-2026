@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<csvDataAdapter class="net.sf.jasperreports.data.csv.CsvDataAdapterImpl">
+	<name>New Data Adapter 1</name>
+	<dataFile type="repositoryDataLocation">
+		<location>C:\Users\shind\OneDrive\Desktop\orders.csv</location>
+	</dataFile>
+	<recordDelimiter>
+</recordDelimiter>
+	<fieldDelimiter>,</fieldDelimiter>
+	<useFirstRowAsHeader>false</useFirstRowAsHeader>
+	<locale>en_IN</locale>
+	<timeZone>Asia/Calcutta</timeZone>
+	<queryExecuterMode>false</queryExecuterMode>
+	<columnNames>employeeId</columnNames>
+	<columnNames>shipCity</columnNames>
+	<columnNames>shipCountry</columnNames>
+	<columnNames>freight</columnNames>
+</csvDataAdapter>

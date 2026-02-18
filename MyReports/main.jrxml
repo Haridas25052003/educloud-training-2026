@@ -1,0 +1,35 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="mainreport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="80312fdf-5640-4b7c-946d-b5d4de821d3c">
+	<parameter name="studentName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rahul Sharma"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rollNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["101"]]></defaultValueExpression>
+	</parameter>
+	<detail>
+		<band height="300">
+			<element kind="staticText" uuid="f6d8e28b-966f-4c3c-bac9-135b27ec15a3" x="0" y="0" width="300" height="30">
+				<text><![CDATA[Student Report]]></text>
+			</element>
+			<element kind="textField" uuid="a6313b45-8f5d-446c-b83c-16bf027f473a" x="0" y="40" width="300" height="25">
+				<expression><![CDATA["Name: " + $P{studentName}]]></expression>
+			</element>
+			<element kind="textField" uuid="6b16a89d-6de2-439d-83ab-1ebb2afee78a" x="0" y="70" width="300" height="25">
+				<expression><![CDATA["Roll No: " + $P{rollNo}]]></expression>
+			</element>
+			<element kind="subreport" uuid="5f0052cf-1abc-48ec-b5ed-1556c60fce56" x="0" y="110" width="500" height="150">
+				<dataSourceExpression><![CDATA[
+                    new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource(
+                        java.util.Arrays.asList(
+                            new Object(){ public String getSubject(){return "Math";} public Integer getMarks(){return 85;} },
+                            new Object(){ public String getSubject(){return "Science";} public Integer getMarks(){return 90;} },
+                            new Object(){ public String getSubject(){return "English";} public Integer getMarks(){return 78;} },
+                            new Object(){ public String getSubject(){return "Computer";} public Integer getMarks(){return 95;} }
+                        )
+                    )
+                ]]></dataSourceExpression>
+				<expression><![CDATA["sub.jasper"]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

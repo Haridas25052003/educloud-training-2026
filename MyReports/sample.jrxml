@@ -1,0 +1,53 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="sample" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4fabf4b-38aa-4112-b037-f21ad0ff59ca">
+	<query language="sql"><![CDATA[]]></query>
+	<field name="name" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="mob_number" class="java.lang.Integer"/>
+	<background splitType="Stretch"/>
+	<title height="174" splitType="Stretch">
+		<element kind="staticText" uuid="d908fa0e-de43-499a-8560-467e2b015c12" x="150" y="0" width="239" height="52" fontSize="25.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Sample report - 01]]></text>
+		</element>
+		<element kind="staticText" uuid="ec373847-b9d3-496b-933b-501aec3121c2" x="180" y="52" width="186" height="48" fontSize="12.0" italic="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[A/P pangra shinde Tq.Basmath
+Dist.Hingoli]]></text>
+		</element>
+		<element kind="staticText" uuid="0d1c9e67-cfc3-417c-a75a-68558749c8af" x="220" y="100" width="100" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[7875859810]]></text>
+		</element>
+	</title>
+	<detail>
+		<band height="215" splitType="Stretch">
+			<element kind="line" uuid="2da70d8e-bdf5-48d2-bca5-bd0efb9330e2" x="50" y="60" width="130" height="1"/>
+			<element kind="line" uuid="8ddc1940-1b50-45a2-9d46-c4149fbd44a3" x="390" y="56" width="150" height="1"/>
+			<element kind="line" uuid="acedb3c5-00fb-49c9-b6a6-88e30fc0979c" x="50" y="156" width="141" height="1"/>
+			<element kind="line" uuid="ac3d67dd-3e1c-40e5-a4fe-865485ee808c" x="400" y="156" width="145" height="1"/>
+			<element kind="textField" uuid="5688dab1-05a1-405c-a0af-610a40873ef3" x="110" y="41" width="100" height="30">
+				<expression><![CDATA[$F{name}]]></expression>
+			</element>
+			<element kind="staticText" uuid="d41bb920-2f5f-4763-8060-298fdf5043e4" x="50" y="41" width="180" height="16">
+				<text><![CDATA[name :]]></text>
+			</element>
+			<element kind="textField" uuid="e1dba93b-e6e8-4374-b225-e7e3a3de354e" x="460" y="41" width="100" height="30">
+				<expression><![CDATA[$F{email}]]></expression>
+			</element>
+			<element kind="staticText" uuid="a16dbd8e-99a9-4cef-90b3-15c6992815f5" x="389" y="40" width="100" height="30">
+				<text><![CDATA[email]]></text>
+			</element>
+			<element kind="textField" uuid="552b0163-3e5b-4238-91a4-bb3a50b39aeb" x="130" y="140" width="100" height="30">
+				<expression><![CDATA[$F{address}]]></expression>
+			</element>
+			<element kind="staticText" uuid="00594b3e-d147-4998-95b5-fb8d874f58da" x="50" y="140" width="100" height="30">
+				<text><![CDATA[address]]></text>
+			</element>
+			<element kind="textField" uuid="15d80dda-dbec-47df-bfd3-b384e2e47f9c" x="470" y="140" width="100" height="30">
+				<expression><![CDATA[$F{mob_number}]]></expression>
+			</element>
+			<element kind="staticText" uuid="3f8bae0a-a9bd-4557-9af4-cac65de1d07e" x="400" y="140" width="100" height="30">
+				<text><![CDATA[mob_number]]></text>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

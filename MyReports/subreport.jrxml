@@ -1,0 +1,50 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="student_marks_subreport"
+              pageWidth="595"
+              pageHeight="200"
+              columnWidth="555"
+              leftMargin="20"
+              rightMargin="20"
+              topMargin="20"
+              bottomMargin="20">
+
+    <!-- Fields -->
+    <field name="subject" class="java.lang.String"/>
+    <field name="marks" class="java.lang.Integer"/>
+
+    <!-- Column Header -->
+    <columnHeader>
+        <band height="30">
+            <staticText>
+                <reportElement x="0" y="0" width="200" height="30"/>
+                <text><![CDATA[Subject]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="220" y="0" width="200" height="30"/>
+                <text><![CDATA[Marks]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <!-- Detail -->
+    <detail>
+        <band height="25">
+            <textField>
+                <reportElement x="0" y="0" width="200" height="25"/>
+                <textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="220" y="0" width="200" height="25"/>
+                <textFieldExpression><![CDATA[$F{marks}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+</jasperReport>

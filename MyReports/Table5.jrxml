@@ -1,0 +1,20 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Table5" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5b58fb72-e1b5-445a-98cb-50b6453b2292">
+	<query language="sql"><![CDATA[]]></query>
+	<field name="month" class="java.lang.String"/>
+	<field name="amount" class="java.lang.Double"/>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<summary height="420" splitType="Stretch">
+		<element kind="chart" chartType="line" uuid="d59ed987-8645-49f8-82fe-6f48e7b929de" x="80" y="80" width="400" height="200" evaluationTime="Report">
+			<dataset kind="category">
+				<series>
+					<seriesExpression><![CDATA["Monthly Fee"]]></seriesExpression>
+					<categoryExpression><![CDATA[$F{month}]]></categoryExpression>
+					<valueExpression><![CDATA[$F{amount}]]></valueExpression>
+				</series>
+			</dataset>
+			<plot categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000"/>
+		</element>
+	</summary>
+</jasperReport>

@@ -1,0 +1,13 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Table7" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4265f4a4-da03-4d45-ba39-fba4ecdbfd59">
+	<query language="sql"><![CDATA[]]></query>
+	<background height="270" splitType="Stretch">
+		<element kind="image" uuid="80074732-8ea6-4ddb-95c2-da0911795363" mode="Transparent" x="0" y="0" width="380" height="200" linkType="None" linkTarget="Self" removeLineWhenBlank="true">
+			<expression><![CDATA["C:\Users\shind\OneDrive\Pictures\lenovo.jpg"]]></expression>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+	</background>
+</jasperReport>

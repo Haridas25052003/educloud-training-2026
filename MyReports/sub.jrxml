@@ -1,0 +1,23 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="subreport" language="java" pageWidth="595" pageHeight="200" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="978063c8-838f-4f46-84c7-bb0c9ab1d0f8">
+	<field name="subject" class="java.lang.String"/>
+	<field name="marks" class="java.lang.Integer"/>
+	<columnHeader height="25">
+		<element kind="staticText" uuid="ef34a143-a0af-48b2-8183-aa1a15b82640" x="0" y="0" width="200" height="20">
+			<text><![CDATA[Subject]]></text>
+		</element>
+		<element kind="staticText" uuid="3c383336-eab4-4245-ab72-aa6df633d2cc" x="220" y="0" width="200" height="20">
+			<text><![CDATA[Marks]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<element kind="textField" uuid="b09da843-415b-4b0e-8df9-17eb4a50fc99" x="0" y="0" width="200" height="20">
+				<expression><![CDATA[$F{subject}]]></expression>
+			</element>
+			<element kind="textField" uuid="0f6cb65c-b5f7-411f-98d1-bfc605be230d" x="220" y="0" width="200" height="20">
+				<expression><![CDATA[$F{marks}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

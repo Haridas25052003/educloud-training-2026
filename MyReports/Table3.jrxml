@@ -1,0 +1,23 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Table3" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6eb81d29-1209-4104-8327-732aacb874a9">
+	<query language="sql"><![CDATA[]]></query>
+	<field name="studentName" class="java.lang.String"/>
+	<field name="course" class="java.lang.String"/>
+	<field name="fee" class="java.lang.Double"/>
+	<background splitType="Stretch"/>
+	<title height="48" splitType="Stretch"/>
+	<summary height="379" splitType="Stretch">
+		<element kind="chart" chartType="bar" uuid="966afe52-be0f-4f8c-a1fe-60a276ccf154" x="50" y="30" width="370" height="290" evaluationTime="Report">
+			<dataset kind="category">
+				<series>
+					<seriesExpression><![CDATA[$F{studentName}]]></seriesExpression>
+					<categoryExpression><![CDATA[$F{course}]]></categoryExpression>
+					<valueExpression><![CDATA[$F{fee}]]></valueExpression>
+				</series>
+			</dataset>
+			<plot categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000">
+				<itemLabel/>
+			</plot>
+		</element>
+	</summary>
+</jasperReport>
